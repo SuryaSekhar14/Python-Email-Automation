@@ -1,5 +1,6 @@
 import smtplib
 
+
 sender=input(str("Your Email:"))         #Enter your E-mail ID
 receiver=input(str("Reciever's Email:"))    #Enter Reciever's Email ID   
 password=input(str("Your Password:"))    #Enter your Password
