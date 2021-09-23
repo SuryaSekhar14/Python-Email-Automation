@@ -17,4 +17,4 @@ msg= f'Subject:{subject} \n\n {data}'
 
 smtpserver.sendmail(sender,receiver,msg)
 print('Sent')
-smtpserver.close()
+smtpserver.close() 
