@@ -1,7 +1,6 @@
 import smtplib
 import csv
 
-
 sender=input(str("Your Email: "))         #Enter your E-mail ID
 password=input(str("Your Password: "))    #Enter your Password
 
