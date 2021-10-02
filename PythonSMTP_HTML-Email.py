@@ -4,19 +4,16 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-# me = my email address
-# you = recipient's email address
-me = "my@email.com" 
-you = "your@email.com"
+sender = "sender@email.com" 
+reciever = "reciever@email.com"
 
 # Create message container - the correct MIME type is multipart/alternative.
 msg = MIMEMultipart('alternative')
 msg['Subject'] = "Link"
-msg['From'] = me
-msg['To'] = you
+msg['From'] = sender
+msg['To'] = reciever
 
 # Create the body of the message (a plain-text and an HTML version).
-
 text = "Hi!\nHow are you?\nHere is the link you wanted:\nhttp://www.acm.org/\nmake sure to register"
 html = """\
 <html>
@@ -49,5 +46,5 @@ mail.ehlo()
 mail.starttls()
 # Login credentials
 mail.login('userName', 'password')
-mail.sendmail(me, you, msg.as_string())
+mail.sendmail(sender, reciever, msg.as_string())
 mail.quit()
